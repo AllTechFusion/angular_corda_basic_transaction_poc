@@ -1,0 +1,54 @@
+.background {
+    position: relative;
+  }
+  
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .buttons .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #0062FF;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+
+
+  //*****************************
+  // .textured-background {
+  //   background-color: #f3f3f3; /* Base color */
+  //   background-image: url('../assets/images/blockchain-g6ad4ccbaa_1280.jpg'); /* Texture image path */
+  //   background-repeat: repeat; /* Repeat the texture */
+  // }
+  
