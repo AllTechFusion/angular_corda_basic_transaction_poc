@@ -34,6 +34,7 @@ ngOnInit(): void {
 }
 
 login(value:any){
-  this.router.navigate(['/party/:'+value]);
+  // this.router.navigate(['/party/'+value]);
+  this.router.navigate(['/party', value]);
 }
 }

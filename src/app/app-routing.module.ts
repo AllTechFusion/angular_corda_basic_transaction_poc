@@ -6,7 +6,7 @@ import { PartyPageComponent } from './party-page/party-page.component';
 const routes: Routes = [
   {path:'home',component:HomePageComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
-   {path:'party/:name',component:PartyPageComponent,pathMatch:'full'}
+   {path:'party/:name',component:PartyPageComponent}
 ];
 
 @NgModule({
