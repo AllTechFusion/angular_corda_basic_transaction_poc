@@ -23,4 +23,9 @@ export class DataServiceService {
     let url=API_URL.START_URL+port+API_URL.CREATE_TRX_IOUS_IOUVALUE+amount+API_URL.CREATE_TRX_IOUS_PARTYNAME+otherpartyName
     return this.http.post<any>(url,null,{headers});
   }
+
+  getLedgerIous(port:any) {
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.get<any>(API_URL.START_URL+port+API_URL.LEDGER_TRX_DETAILS_IOUS, { headers });
+  }
 }

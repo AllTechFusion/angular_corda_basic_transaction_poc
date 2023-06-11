@@ -15,10 +15,22 @@ export class PartyPageComponent implements OnInit {
   peersDetails:any
   showSuccessPopup: boolean = false;
   trxSuccessMessage: any;
-
+  items: any[] = [
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+    // Add more items as needed
+  ];
+  ledgerDetails: any;
   constructor(private route: ActivatedRoute,private dataService:DataServiceService,private fb: FormBuilder) {}
 
   ngOnInit() {
+    this.myDetails={
+me:"Main Branch"
+    }
     this.myForm = this.fb.group({
       amount: ['', Validators.required],
       recipient: ['', Validators.required]
@@ -78,5 +90,19 @@ export class PartyPageComponent implements OnInit {
 
   hideSuccess() {
     this.showSuccessPopup = false;
+  }
+
+  getLedgerTrx(){
+    this.dataService.getLedgerIous(this.paramValue).subscribe(
+      (response) => {
+        // Handle the response data
+        this.ledgerDetails=response;
+        console.log(response);
+      },
+      (error) => {
+        // Handle the error
+        console.error(error);
+      }
+    );
   }
 }

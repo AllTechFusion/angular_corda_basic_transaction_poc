@@ -81,3 +81,31 @@
     background-color: white;
     margin-top: 1%;
   }
+
+  .card-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .card-wrapper {
+    display: inline-flex;
+  }
+  .cardCarousel {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust the width as per your requirements */
+    margin-right: 10px; /* Adjust the margin as per your requirements */
+    width: 15%;
+    background-color: lightcyan;
+  }
+  .ledgerBtn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15%;
+  }
